@@ -36,8 +36,7 @@ export interface UseRoom {
     stopShare: () => void;
 }
 
-const relayConfig: Partial<RTCConfiguration> =
-    window.location.search.indexOf('forceTurn=true') !== -1 ? {iceTransportPolicy: 'relay'} : {};
+const relayConfig: Partial<RTCConfiguration> = {iceTransportPolicy: 'relay'} : {};
 
 const hostSession = async ({
     sid,
